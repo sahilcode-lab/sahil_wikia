@@ -1,0 +1,8 @@
+{%extends "layout.html"%}
+{%block title%}
+{{title}}
+{%endblock%}
+{%block body%}
+{{content}}
+<a href="{%url 'edit' title=title%}" style="color: darkolivegreen; padding: 5px;">Edit</a>
+{%endblock%}

@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Create new page
+{% endblock %}
+
+{% block body %}
+    <h1>Enter the title and the markdown content that you want to add in your encyclopedia</h1>
+
+  <form action="{%url 'create'%}" method="post">
+    {%csrf_token%}
+    <input type="text" placeholder="type title" name="q">
+    <input type="text" placeholder="enter markdown content" name="content">
+    <button type="submit">Submit entry</button>
+
+  </form>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{%extends "layout.html"%}
+{%block title%}
+edit {{title}}
+{%endblock%}
+{%block body%}
+<form action="{%url 'edit' title=title%}" method="post">
+    {%csrf_token%}
+    <textarea name="content" style="color: blue; font-size: larger; border: 2px;">
+        {{content}}
+    </textarea>
+    <button type="submit">Save</button>
+
+
+
+</form>
+{%endblock%}
